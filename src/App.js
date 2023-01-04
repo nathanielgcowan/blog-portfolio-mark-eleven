@@ -6,9 +6,6 @@ import { BookRoutes } from './BookRoutes';
 function App() {
   return (
     <>
-      <Routes location="/books">
-        <Route path='/books' element={<h1>Extra Content</h1>} />
-      </Routes>
       <nav>
         <ul>
           <li><Link to='/'>Home</Link></li>
@@ -18,7 +15,7 @@ function App() {
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/books' element={<BookRoutes />} />
+        <Route path='/books/*' element={<BookRoutes />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </>
